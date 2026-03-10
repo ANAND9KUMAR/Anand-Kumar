@@ -5,7 +5,7 @@ const experience = [
   {
     role: "Software Engineering Consultant",
     company: "Independent / Digital Agencies",
-    period: "2023 – Present",
+    period: "2025 – Present",
     desc: "Advised and developed high-scale web solutions for diverse clients, focusing on architectural integrity and performant frontend ecosystems.",
     achievements: [
       "Engineered comprehensive design systems reducing development time by 30%.",
@@ -30,7 +30,7 @@ const ExperienceSection = () => (
 
             <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-8">
               <div className="flex items-center gap-5">
-                <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-500">
                   <Briefcase size={28} />
                 </div>
                 <div>

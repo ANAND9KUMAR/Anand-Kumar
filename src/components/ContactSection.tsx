@@ -1,15 +1,15 @@
 import SectionWrapper from "./SectionWrapper";
-import { Mail, Phone, Github, Linkedin, Instagram, icons } from "lucide-react";
+import { Mail, Phone, Github, Linkedin, Instagram, Twitter, InstagramIcon } from "lucide-react";
 import { motion } from "framer-motion";
-import { label } from "three/src/nodes/core/ContextNode.js";
 
 const contacts = [
-  { icon: Mail, label: "Direct Inquiry", value: "anandgupta88099@gmail.com", href: "mailto:anandgupta88099@gmail.com" },
-  { icon: Linkedin, label: "Professional Profile", value: "https://www.linkedin.com/in/anand-kumar-3a8554213/", href: "https://www.linkedin.com/in/anand-kumar-3a8554213/" },
-  { icon: Github, label: "Technical Workspace", value: "github.com/ANAND9KUMAR", href: "https://github.com/ANAND9KUMAR" },
-  { icon: Phone, label: "Direct Consultation", value: "+91-9304705319", href: "tel:+919304705319" },
-  { icon: Instagram, label: "social media", value: "kum_ar_aanand", href:"https://www.instagram.com/kum_ar_aanand/" },
-  { icon: icons.Twitter, label: "social media", value: "@anandgupta85765", href: "https://x.com/AnandGupta85765"},
+  { icon: Mail, label: "Direct Inquiry", value: "ananadgupta88099@gmail.com", href: "mailto:ananadgupta88099@gmail.com" },
+  { icon: Linkedin, label: "Professional Profile", value: "Anand Kumar", href: "https://www.linkedin.com/in/anand-kumar-3a8554213/" },
+  { icon: Github, label: "Technical Workspace", value: "Anand Kumar", href: "https://github.com/ANAND9KUMAR" },
+  { icon: Instagram, label: "Social Media", value: "kum_ar_aanand", href: "https://www.instagram.com/kum_ar_aanand/" },
+  { icon: Phone, label: "Direct Consultation", value: "+91 9304705319", href: "tel:+919304705319" },
+  
+  { icon: Twitter, label: "Social Media", value: "", href: "" },
 ];
 
 const ContactSection = () => (
@@ -37,7 +37,7 @@ const ContactSection = () => (
             transition={{ delay: i * 0.1, duration: 0.6 }}
             className="group glass-card p-6 flex items-center gap-6 hover:border-primary/40 transition-all duration-500"
           >
-            <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-inner">
+            <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-500 shadow-inner">
               <c.icon size={24} />
             </div>
             <div>

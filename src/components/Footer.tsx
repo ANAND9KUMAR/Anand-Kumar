@@ -1,4 +1,4 @@
-import { Github, Instagram, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const Footer = () => (
   <footer className="border-t border-white/5 py-12 px-4 text-center">
@@ -8,9 +8,9 @@ const Footer = () => (
       </div>
       <div className="flex justify-center gap-8 mb-10">
         {[
-          { icon: Github, href: "https://github.com/ANAND9KUMAR" },
-          { icon: Linkedin, href: "https://www.linkedin.com/in/anand-kumar-3a8554213/" },
-          { icon: Mail, href: "mailto:anandgupta88099@gmail.com" },
+          { icon: Github, href: "#" },
+          { icon: Linkedin, href: "#" },
+          { icon: Mail, href: "mailto:contact@anand.dev" },
         ].map((s, i) => (
           <a key={i} href={s.href} className="text-white/40 hover:text-primary transition-all duration-300 transform hover:scale-110">
             <s.icon size={22} />

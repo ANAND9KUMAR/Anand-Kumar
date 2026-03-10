@@ -3,7 +3,7 @@ import { GraduationCap } from "lucide-react";
 
 const education = [
   { degree: "B.E. Computer Science & Engineering", school: "Chandigarh University", period: "2020 – 2024" },
-  { degree: "Higher Secondary", school: "SGM+2 High School", period: "2018 - 2020" },
+  { degree: "Higher Secondary", school: "SGM+2 High School", period: "" },
 ];
 
 const EducationSection = () => (

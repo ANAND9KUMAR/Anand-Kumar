@@ -45,7 +45,7 @@ const HeroSection = () => {
                 {name.includes("Kumar") ? (
                   <>
                     <span className="text-foreground">{name.split("Kumar")[0]}</span>
-                    <span className="gradient-text drop-shadow-[0_0_25px_rgba(139,92,246,0.3)]">
+                    <span className="gradient-text drop-shadow-[0_0_25px_rgba(74,222,128,0.3)]">
                       Kumar
                     </span>
                   </>
@@ -58,7 +58,7 @@ const HeroSection = () => {
                   initial={{ opacity: 1 }}
                   animate={{ opacity: [1, 0, 1] }}
                   transition={{ duration: 0.8, repeat: Infinity }}
-                  className={`inline-block w-[4px] h-[0.8em] bg-primary ml-2 shadow-[0_0_15px_rgba(139,92,246,0.8)] ${nameDone ? 'hidden' : ''}`}
+                  className={`inline-block w-[4px] h-[0.8em] bg-primary ml-2 shadow-[0_0_15px_rgba(74,222,128,0.8)] ${nameDone ? 'hidden' : ''}`}
                 />
               </span>
             </h1>
