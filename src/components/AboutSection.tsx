@@ -21,13 +21,22 @@ const AboutSection = () => (
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {highlights.map((h, i) => (
-          <div key={i} className="glass-card p-8 flex items-start gap-6 group hover:border-white/20 transition-all duration-500">
-            <div className="w-14 h-14 shrink-0 rounded-2xl bg-white/5 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
-              <h.icon size={28} />
-            </div>
-            <div>
-              <h3 className="font-display text-xl font-bold mb-2 group-hover:text-primary transition-colors">{h.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{h.desc}</p>
+          <div key={i} className="relative p-[1px] rounded-xl overflow-hidden group hover:-translate-y-2 transition-transform duration-500">
+            {/* Animated Gradient Border */}
+            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 group-hover:from-white/40 group-hover:via-accent/40 group-hover:to-accent/80 transition-all duration-500" />
+            
+            <div className="relative glass-card bg-card/90 p-8 flex flex-col h-full rounded-xl w-full">
+              <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center text-primary mb-6 group-hover:bg-gradient-to-br group-hover:from-primary group-hover:to-accent group-hover:text-primary-foreground transition-all duration-500 shadow-inner group-hover:shadow-[0_0_20px_hsla(var(--accent)/0.5)]">
+                <h.icon size={28} />
+              </div>
+              
+              <h3 className="font-display text-xl font-bold mb-3 tracking-wide text-white/90 group-hover:text-white transition-colors duration-300">
+                {h.title}
+              </h3>
+              
+              <p className="text-muted-foreground leading-relaxed">
+                {h.desc}
+              </p>
             </div>
           </div>
         ))}

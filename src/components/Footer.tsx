@@ -18,7 +18,7 @@ const Footer = () => (
         ))}
       </div>
       <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/20">
-        © 2024 Engineering Excellence • Developed by Anand
+        © 2022 Engineering Excellence • Developed by Anand
       </p>
     </div>
   </footer>

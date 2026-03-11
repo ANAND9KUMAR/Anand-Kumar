@@ -35,14 +35,19 @@ const ContactSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1, duration: 0.6 }}
-            className="group glass-card p-6 flex items-center gap-6 hover:border-primary/40 transition-all duration-500"
+            className="group relative p-[1px] rounded-xl overflow-hidden hover:-translate-y-2 transition-transform duration-500 block"
           >
-            <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-500 shadow-inner">
-              <c.icon size={24} />
-            </div>
-            <div>
-              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-white/30 mb-1">{c.label}</p>
-              <p className="text-lg font-bold tracking-tight text-white/90 group-hover:text-white">{c.value}</p>
+            {/* Animated Gradient Border */}
+            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 group-hover:from-white/40 group-hover:via-accent/40 group-hover:to-accent/80 transition-all duration-500" />
+            
+            <div className="relative glass-card bg-card/90 p-6 flex items-center gap-6 h-full rounded-xl w-full shadow-inner group-hover:shadow-[0_0_20px_hsla(var(--accent)/0.5)]">
+              <div className="w-14 h-14 shrink-0 rounded-2xl bg-white/5 flex items-center justify-center text-primary group-hover:bg-gradient-to-br group-hover:from-primary group-hover:to-accent group-hover:text-primary-foreground transition-all duration-500 shadow-inner group-hover:shadow-[0_0_20px_hsla(var(--accent)/0.5)] group-hover:scale-110">
+                <c.icon size={24} />
+              </div>
+              <div>
+                <p className="text-[10px] font-black uppercase tracking-[0.2em] text-white/40 mb-1 group-hover:text-accent transition-colors">{c.label}</p>
+                <p className="text-lg font-bold tracking-tight text-white/90 group-hover:text-white transition-colors">{c.value}</p>
+              </div>
             </div>
           </motion.a>
         ))}
