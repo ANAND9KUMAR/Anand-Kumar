@@ -11,11 +11,11 @@ const projects = [
     demo: "https://uvindia.in",
   },
   {
-    title: "Interior Vision SEPL",
-    category: "UI/UX Architecture",
-    desc: "A high-fidelity interior design portfolio featuring advanced layout systems and fluid motion engineering.",
-    tech: ["TypeScript", "Motion", "Tailwind", "Architecture"],
-    demo: "https://siyaattri.com",
+    title: "Tridev Car Care",
+    category: "Web Development",
+    desc: "A modern platform for premium car care services, detailing, and automotive solutions.",
+    tech: ["React", "Tailwind", "Motion", "Architecture"],
+    demo: "https://tridevcarcare.com/",
   },
 ];
 

@@ -9,7 +9,7 @@ const experience = [
     desc: "Advised and developed high-scale web solutions for diverse clients, focusing on architectural integrity and performant frontend ecosystems.",
     achievements: [
       "Engineered comprehensive design systems reducing development time by 30%.",
-      "Successfully launched the digital presence for UVIndia and SEPL with zero post-launch critical bugs.",
+      "Successfully launched the digital presence for UVIndia and Tridev Car Care with zero post-launch critical bugs.",
       "Optimized Core Web Vitals resulting in a 40% improvement in lighthouse performance scores.",
       "Implemented highly secure Firebase backend integration for real-time data handling."
     ]
