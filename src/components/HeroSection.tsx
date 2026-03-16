@@ -92,8 +92,9 @@ const HeroSection = () => {
               <ArrowDown size={20} />
             </a>
             <a
-              href="/src/assets/Resume.pdf"
-              download="Anand_Kumar_Resume.pdf"
+              href="https://drive.google.com/drive/folders/1wUkAnFLyMNUGn0ZB2WKaaCpYQg1h3wS2?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
               className="glass-card hover:bg-white/5 px-10 py-4 rounded-full font-semibold border border-white/10 inline-flex items-center gap-3 text-lg transition-all"
             >
               Download CV <Download size={20} />
