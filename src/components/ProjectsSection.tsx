@@ -17,6 +17,20 @@ const projects = [
     tech: ["React", "Tailwind", "Motion", "Architecture"],
     demo: "https://tridevcarcare.com/",
   },
+  {
+    title: "ArudhaTech",
+    category: "Full-Stack & Cloud",
+    desc: "A comprehensive digital enterprise platform offering web & mobile development, cloud architecture, and AI solutions.",
+    tech: ["React", "Next.js", "Node.js", "Cloud"],
+    demo: "https://arudhatech.com/",
+  },
+  {
+    title: "Finance Module",
+    category: "FinTech & Enterprise",
+    desc: "An enterprise financial management system featuring real-time transaction tracking, reporting analytics, and automated document exports.",
+    tech: ["React", "Node.js", "Tailwind", "PDF Export"],
+    demo: "https://finace-module.vercel.app/",
+  },
 ];
 
 const ProjectsSection = () => (
