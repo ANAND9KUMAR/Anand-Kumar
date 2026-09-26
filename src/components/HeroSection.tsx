@@ -1,6 +1,7 @@
-import { motion, AnimatePresence } from "framer-motion";
-import { ArrowDown, Download, Sparkles } from "lucide-react";
+import { motion } from "framer-motion";
+import { ArrowDown, Download, Terminal, Copy, Sparkles } from "lucide-react";
 import { useState, useEffect } from "react";
+import { toast } from "sonner";
 
 const useTypewriter = (text: string, speed = 100, delay = 1000) => {
   const [displayed, setDisplayed] = useState("");
@@ -38,6 +39,22 @@ const HeroSection = () => {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="space-y-6"
         >
+          {/* Trending Live Status Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-2 shadow-[0_0_25px_rgba(74,222,128,0.15)] group hover:border-accent/40 transition-all cursor-default"
+          >
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-400" />
+            </span>
+            <span className="text-xs font-semibold text-white/90 tracking-wide flex items-center gap-1.5">
+              Available for High-Scale Enterprise Projects
+              <Sparkles size={12} className="text-accent" />
+            </span>
+          </motion.div>
 
           <div className="relative inline-block">
             <h1 className="font-display text-6xl md:text-9xl font-extrabold tracking-tighter leading-none mb-4 min-h-[1.2em]">
@@ -74,7 +91,7 @@ const HeroSection = () => {
           >
             <p className="text-xl md:text-2xl text-muted-foreground font-light max-w-3xl mx-auto leading-relaxed">
               Software Engineer specializing in <span className="text-foreground font-medium">performant web architectures</span>.
-              Engineering scalable solutions with a focus on <span className="text-foreground font-medium">user-centric design</span>.
+              Engineering scalable solutions with a focus on <span className="text-foreground font-medium">user-centric design & automation</span>.
             </p>
           </motion.div>
 
@@ -82,23 +99,49 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 2.8, duration: 0.8 }}
-            className="flex flex-wrap gap-5 justify-center pt-8"
+            className="flex flex-wrap gap-4 justify-center pt-8"
           >
             <a
               href="#projects"
-              className="glow-button group bg-primary text-primary-foreground px-10 py-4 rounded-full font-semibold inline-flex items-center gap-3 text-lg transition-all hover:gap-5"
+              className="glow-button group bg-primary text-primary-foreground px-8 py-3.5 rounded-full font-semibold inline-flex items-center gap-2.5 text-base transition-all hover:gap-4 shadow-lg hover:shadow-[0_0_25px_rgba(255,255,255,0.2)]"
             >
-              View Portfolio
-              <ArrowDown size={20} />
+              Explore Portfolio
+              <ArrowDown size={18} />
             </a>
+
+            <a
+              href="#automation"
+              className="glass-card hover:bg-white/10 px-7 py-3.5 rounded-full font-semibold border border-white/10 hover:border-accent/40 text-white inline-flex items-center gap-2 text-base transition-all"
+            >
+              <Terminal size={18} className="text-accent" />
+              Automation Hub
+            </a>
+
             <a
               href="https://drive.google.com/drive/folders/1wUkAnFLyMNUGn0ZB2WKaaCpYQg1h3wS2?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
-              className="glass-card hover:bg-white/5 px-10 py-4 rounded-full font-semibold border border-white/10 inline-flex items-center gap-3 text-lg transition-all"
+              className="glass-card hover:bg-white/10 px-7 py-3.5 rounded-full font-semibold border border-white/10 inline-flex items-center gap-2 text-base transition-all text-white/90 hover:text-white"
             >
-              Download CV <Download size={20} />
+              Download CV <Download size={18} />
             </a>
+
+            <button
+              type="button"
+              onClick={() => {
+                navigator.clipboard.writeText("ananadgupta88099@gmail.com");
+                toast.success("Email copied to clipboard!", {
+                  description: "ananadgupta88099@gmail.com",
+                  duration: 3000
+                });
+              }}
+              className="glass-card hover:bg-white/10 px-5 py-3.5 rounded-full font-semibold border border-white/10 inline-flex items-center gap-2 text-base transition-all text-white/70 hover:text-white"
+              title="Copy Email"
+              aria-label="Copy Email"
+            >
+              <Copy size={16} className="text-accent" />
+              <span>Copy Email</span>
+            </button>
           </motion.div>
         </motion.div>
       </div>

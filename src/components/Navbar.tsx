@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Search } from "lucide-react";
 
 const navLinks = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
+  { label: "Automation", href: "#automation" },
   { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
@@ -54,7 +55,20 @@ const Navbar = () => {
               />
             </a>
           ))}
-          <div className="w-[1px] h-4 bg-white/10 mx-2" />
+          <button
+            type="button"
+            onClick={() => {
+              document.dispatchEvent(new KeyboardEvent("keydown", { key: "k", metaKey: true }));
+            }}
+            className="hidden lg:flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-xs text-white/60 hover:text-white transition-all mx-2"
+            title="Open Command Palette (⌘K / Ctrl+K)"
+            aria-label="Open Command Palette"
+          >
+            <Search size={13} className="text-accent" />
+            <span className="text-[11px] font-medium">Quick Search</span>
+            <kbd className="px-1.5 py-0.5 rounded bg-white/10 text-[9px] font-mono text-white/50 border border-white/10">⌘K</kbd>
+          </button>
+          <div className="w-[1px] h-4 bg-white/10 mx-1" />
           <a
             href="#contact"
             className="text-xs font-bold bg-white text-black px-8 py-3 rounded-full hover:bg-white/90 transition-all transform hover:scale-105 active:scale-95 uppercase tracking-widest"

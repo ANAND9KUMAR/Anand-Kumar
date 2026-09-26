@@ -1,0 +1,35 @@
+name: CI Automation & Quality Gate
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+
+jobs:
+  validate-and-test:
+    runs-on: ubuntu-latest
+    name: Automated Lint, Test & Build
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Automated Lint Check
+        run: npm run lint
+
+      - name: Automated Unit & Component Tests
+        run: npm run test
+
+      - name: Automated Production Build
+        run: npm run build

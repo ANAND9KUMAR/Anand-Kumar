@@ -9,6 +9,9 @@ import ExperienceSection from "@/components/ExperienceSection";
 import EducationSection from "@/components/EducationSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import Chatbot from "@/components/Chatbot";
+import AutomationSection from "@/components/AutomationSection";
+import CommandPalette from "@/components/CommandPalette";
 
 // Lazy load heavy components like the 3D canvas and dynamic cursor
 const PremiumBackground = React.lazy(() => import("@/components/PremiumBackground"));
@@ -28,11 +31,14 @@ const Index = () => {
         <HeroSection />
         <AboutSection />
         <SkillsSection />
+        <AutomationSection />
         <ProjectsSection />
         <ExperienceSection />
         <EducationSection />
         <ContactSection />
         <Footer />
+        <Chatbot />
+        <CommandPalette />
       </div>
     </div>
   );

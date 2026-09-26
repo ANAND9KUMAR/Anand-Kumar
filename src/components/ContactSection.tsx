@@ -1,5 +1,5 @@
 import SectionWrapper from "./SectionWrapper";
-import { Mail, Phone, Github, Linkedin, Instagram, Twitter, InstagramIcon } from "lucide-react";
+import { Mail, Phone, Github, Linkedin, Instagram } from "lucide-react";
 import { motion } from "framer-motion";
 
 const contacts = [
@@ -8,8 +8,6 @@ const contacts = [
   { icon: Github, label: "Technical Workspace", value: "Anand Kumar", href: "https://github.com/ANAND9KUMAR" },
   { icon: Instagram, label: "Social Media", value: "kum_ar_aanand", href: "https://www.instagram.com/kum_ar_aanand/" },
   { icon: Phone, label: "Direct Consultation", value: "+91 9304705319", href: "tel:+919304705319" },
-  
-  { icon: Twitter, label: "Social Media", value: "", href: "" },
 ];
 
 const ContactSection = () => (

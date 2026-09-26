@@ -4,7 +4,8 @@ import {
   Code2, Palette, Terminal, Cpu,
   Coffee, Atom, FileJson, FileCode2, Zap, Library, Database,
   Wind, Move, Component, FileBox, MonitorSmartphone, Sparkles,
-  TerminalSquare, LayoutGrid, Monitor, GitBranch, Github, Wrench
+  TerminalSquare, LayoutGrid, Monitor, GitBranch, Github, Wrench,
+  type LucideIcon
 } from "lucide-react";
 
 const skillGroups = [
@@ -50,7 +51,7 @@ const skillGroups = [
   }
 ];
 
-const SkillBadge = ({ skill, i }: { skill: { name: string; icon: any }; i: number }) => (
+const SkillBadge = ({ skill, i }: { skill: { name: string; icon: LucideIcon }; i: number }) => (
   <motion.div
     initial={{ opacity: 0, y: 10 }}
     whileInView={{ opacity: 1, y: 0 }}
